@@ -4,9 +4,9 @@ const express = require('express'); // bringing in a toolbox that has helpful to
 const app = express(); // Creates an instance of an EXPRESS app, turns on the "toolbox"/ the SERVER
 
 // Importing functions for handling errors
-const notFoundHandler = require('./handlers/404.js');
-const errorHandler = require('./handlers/500.js');
-const stamper = require('./middleware/stamper.js');
+const notFoundHandler = require('../handlers/404.js');
+const errorHandler = require('../handlers/500.js');
+const stamper = require('../middleware/stamper.js');
 
 app.get('/', stamper, (req, res) => { // This sets up a route handler for the home page (/). 
 //'stamper' middleware that runs before the response is sent, add a timestamp to the request
